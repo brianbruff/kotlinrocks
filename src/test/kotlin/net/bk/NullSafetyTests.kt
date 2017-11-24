@@ -1,7 +1,7 @@
 package net.bk
 
 import org.junit.Test
-import org.junit.internal.runners.statements.ExpectException
+import kotlin.test.assertTrue
 
 
 class NullSafetyTests{
@@ -44,7 +44,7 @@ class NullSafetyTests{
     }
 
 
-    @Test
+    @Test (expected = Exception::class)
     fun elvisOperator(){
         var b : String? = null;
         val l = b?.length ?: -1
@@ -72,6 +72,15 @@ class NullSafetyTests{
         val a : String? = null
         val aInt: Int? = a as? Int
         print(aInt)
+    }
+
+    @Test
+    fun filterNull(){
+        val nullableList: List<Int?> = listOf(1, 2, null, 4)
+        val intList: List<Int> = nullableList.filterNotNull()
+
+        assertTrue(intList.size == 3)
+
     }
 
 
