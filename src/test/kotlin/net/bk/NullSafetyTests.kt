@@ -1,6 +1,7 @@
 package net.bk
 
 import org.junit.Test
+import org.junit.internal.runners.statements.ExpectException
 
 
 class NullSafetyTests{
@@ -51,6 +52,26 @@ class NullSafetyTests{
 
         // throw elvis
         var x = b?.length ?: throw Exception("oops")
+    }
+
+    @Test( expected = NullPointerException::class)
+    fun showMeAnNPE(){
+        var b : String? = null;
+        val l = b!!.length
+
+    }
+
+    @Test (expected = ClassCastException::class)
+    fun unsafeCast(){
+        val a : String? = null
+        val aInt: Int? = a as Int
+    }
+
+    @Test
+    fun safeCast(){
+        val a : String? = null
+        val aInt: Int? = a as? Int
+        print(aInt)
     }
 
 
