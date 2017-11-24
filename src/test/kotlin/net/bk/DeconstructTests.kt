@@ -18,6 +18,13 @@ class DeconstructTests {
         val (dpnu, dpna) = dp
 
         println("dpnu = $dpnu, dpna = $dpna")
+
+        // note data classes also have other component functions
+        //component functions, toString(), equals(), hashCode() and copy().
+        println(dp.copy())
+        println(dp.copy(2))
+        println(dp.copy(first = 2))
+        println(dp.copy(3, "Three"))
     }
 
     class Pair<K, V>(val first: K, val second: V) {
