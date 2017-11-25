@@ -4,7 +4,7 @@ import org.junit.Test
 
 /**
  * Properties stored in a map. This comes up a lot in applications like parsing JSON
- * or doing other "dynamic" stuff. 
+ * or doing other "dynamic" stuff.
  */
 
 class PropsInMapTests{
