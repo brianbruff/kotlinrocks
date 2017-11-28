@@ -9,7 +9,7 @@ class InteropTests{
     @Test
     fun javaPropertyTest(){
         val app = Application()
-        app.Login();
+        app.Login()
 
         assertNotNull( app.userToken )
 

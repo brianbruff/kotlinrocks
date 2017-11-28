@@ -5,7 +5,7 @@ public final class SingletonJava {
 
     private SingletonJava(){}
 
-    public String property;
+    public String property = "Something";
 
     public static SingletonJava getInstance(){
         return INSTANCE;

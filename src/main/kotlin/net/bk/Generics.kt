@@ -1,6 +1,6 @@
 package net.bk
 
-import kotlin.coroutines.experimental.*
+
 
 abstract class Comparable<in T> {
 
@@ -32,11 +32,11 @@ fun demoContraVarience(x: Comparable<Double>){
     val y : Comparable<Number> = x as Comparable<Number>
 
 
-    val deferred = (1..1_000_000).map { n ->
-        async {
-            n
-        }
-    }
+//    val deferred = (1..1_000_000).map { n ->
+//        async {
+//            n
+//        }
+//    }
 }
 
 

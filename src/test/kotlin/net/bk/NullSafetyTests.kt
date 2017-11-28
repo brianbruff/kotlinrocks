@@ -7,7 +7,7 @@ import kotlin.test.assertTrue
 class NullSafetyTests{
 
     @Test fun basicNullTests(){
-        var a: String = "abc"
+        val a: String = "abc"
         //a = null // compilation error
 
         var b: String? = "abc"
@@ -20,9 +20,9 @@ class NullSafetyTests{
         val ll = b?.length // save call
 
         // check tracked by compiler
-        val llll = if (b != null) b.length else -1  // notice ternary
+        val llll = if (b != null) b.length else -1  // notice inline assignment
 
-        // more complex null track
+
         if (b != null && b.length > 0) {
             print("String of length ${b.length}")
         } else {
@@ -30,7 +30,7 @@ class NullSafetyTests{
         }
 
         // Safe call chaining
-        //val x = bob?.department?head
+        //val x = b?.department?head
 
     }
 

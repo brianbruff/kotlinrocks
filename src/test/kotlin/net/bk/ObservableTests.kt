@@ -18,14 +18,14 @@ class ObservableTests {
     @Test(expected = IllegalStateException::class)
     fun notNullNoConstructorValueTest(){
         val user = User()
-        user.name = "Juan"
-        println(user.surName)
+      //  user.name = "Juan"
+        val x = user.surName
+        println(x)
     }
 
     @Test
     fun notNullConstructorValuesOkTest(){
         val user = User()
-        //user.init("Test")
         user.surName = "keating"
         println(user.surName)
     }

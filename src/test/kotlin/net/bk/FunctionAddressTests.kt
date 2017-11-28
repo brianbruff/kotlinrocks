@@ -13,6 +13,8 @@ class FunctionAddressTests {
     @Test
     fun test() {
 
+
+
         // needs 1.2 currently just in preview
        // val oddLength = compose(::isOdd, ::length)
         val strings = listOf("a", "ab", "abc")
