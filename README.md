@@ -1,4 +1,4 @@
 # kotlinrocks
 
-Design patterns from https://raw.githubusercontent.com/dbacinski/Design-Patterns-In-Kotlin
+Design patterns from https://github.com/dbacinski/Design-Patterns-In-Kotlin
 
