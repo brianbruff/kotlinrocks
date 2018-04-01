@@ -12,7 +12,7 @@ class CustomDelegateTests{
         override fun toString() = "Example Class"
     }
 
-    class Delegate() {
+    class Delegate {
         operator fun getValue(thisRef: Any?, prop: KProperty<*>): String {
             return "$thisRef, thank you for delegating '${prop.name}' to me!"
         }

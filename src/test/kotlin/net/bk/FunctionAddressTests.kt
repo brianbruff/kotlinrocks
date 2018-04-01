@@ -14,11 +14,9 @@ class FunctionAddressTests {
     fun test() {
 
 
-
-        // needs 1.2 currently just in preview
-       // val oddLength = compose(::isOdd, ::length)
-        val strings = listOf("a", "ab", "abc")
-       // println(strings.filter(oddLength))
+       val oddLength = compose(::isOdd, ::length)
+       val strings = listOf("a", "ab", "abc")
+       println(strings.filter(oddLength))
        strings.filter{s -> s.length % 2 == 1}
 
 

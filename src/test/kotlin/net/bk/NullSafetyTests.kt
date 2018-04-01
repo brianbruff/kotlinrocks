@@ -7,7 +7,7 @@ import kotlin.test.assertTrue
 class NullSafetyTests{
 
     @Test fun basicNullTests(){
-        val a: String = "abc"
+        var a: String = "abc"
         //a = null // compilation error
 
         var b: String? = "abc"
@@ -15,7 +15,7 @@ class NullSafetyTests{
 
         var l = a.length // safe
 
-        //l = b.length  //  Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type String?
+       // l = b.length  //  Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type String?
 
         val ll = b?.length // save call
 
@@ -30,14 +30,14 @@ class NullSafetyTests{
         }
 
         // Safe call chaining
-        //val x = b?.department?head
+        //val x = b?.department?.head
 
     }
 
     @Test
     fun letWithNulls(){
         // let with nulls
-        val listWithNulls: List<String?> = listOf("A", null)
+        val listWithNulls: List<String?> = listOf("A", null, "B")
         for (item in listWithNulls) {
             item?.let { println(it) } // prints A and ignores null
         }
@@ -46,7 +46,7 @@ class NullSafetyTests{
 
     @Test (expected = Exception::class)
     fun elvisOperator(){
-        var b : String? = null;
+        var b : String? = null
         val l = b?.length ?: -1
         println(l)
 
@@ -56,8 +56,8 @@ class NullSafetyTests{
 
     @Test( expected = NullPointerException::class)
     fun showMeAnNPE(){
-        var b : String? = null;
-        val l = b!!.length
+            var b : String? = null
+            val l = b!!.length
 
     }
 
@@ -78,6 +78,7 @@ class NullSafetyTests{
     fun filterNull(){
         val nullableList: List<Int?> = listOf(1, 2, null, 4)
         val intList: List<Int> = nullableList.filterNotNull()
+        val found  = nullableList.find { x -> x == 2 }
 
         assertTrue(intList.size == 3)
 

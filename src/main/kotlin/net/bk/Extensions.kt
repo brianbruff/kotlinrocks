@@ -6,9 +6,12 @@ data class Customers(var cusomters : MutableList<Customer>){
     fun addCustomer(cust :Customer){
         this.cusomters.add(element = cust)
     }
+
+    operator fun get(index : Int) : Customer? =  this.cusomters?.get(index)
+    operator fun plusAssign(cust : Customer) =  this.addCustomer(cust)
 }
-operator fun Customers.get(index : Int) : Customer? =  this.cusomters?.get(index)
-operator fun Customers.plusAssign(cust : Customer) =  this.addCustomer(cust)
+//operator fun Customers.get(index : Int) : Customer? =  this.cusomters?.get(index)
+//operator fun Customers.plusAssign(cust : Customer) =  this.addCustomer(cust)
 
 
 
@@ -25,5 +28,6 @@ fun main(args: Array<String>) {
 
     customers += cust
     var myCust = customers[0]
+
 
 }

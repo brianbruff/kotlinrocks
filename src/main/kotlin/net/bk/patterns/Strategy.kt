@@ -19,3 +19,6 @@ fun main(args: Array<String>) {
     val prefixPrinter = Printer({ "Prefix: " + it })
     prefixPrinter.printString("LOREM ipsum DOLOR sit amet")
 }
+
+
+

@@ -28,8 +28,8 @@ class CasesTest {
         }
     }
 
-    class MyClass() {
-    }
+    class MyClass
+
 
 
 }

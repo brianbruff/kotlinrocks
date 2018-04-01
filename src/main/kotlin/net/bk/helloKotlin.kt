@@ -3,7 +3,7 @@ package net.bk
 
 
 fun main(args: Array<String>){
-    println("Hello world 1984!")
+    println("Hello world 1972!")
 
 
 }
@@ -18,3 +18,4 @@ fun overloading(){
 
 //fun add(x : Int, y:Int) = x +y;
 fun add(x : Int, y:Int, z:Int = 0) = x + y + z  // no need for overloading with default
+
